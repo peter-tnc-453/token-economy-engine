@@ -1,0 +1,13 @@
+# ข้อมูลส่วนตัว / runtime — ไม่ขึ้น repo
+*.log
+*.err
+baseline.csv
+_pending-review.md
+# ยกเว้น header template ที่ต้องติดมากับ repo
+!templates/baseline.csv
+__pycache__/
+*.pyc
+.DS_Store
+
+# กันเผลอ commit transcript/usage จริง
+data/
