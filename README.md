@@ -1,7 +1,12 @@
+<p align="center">
+  <img src="assets/social-preview.png" alt="Token Economy Engine" width="100%">
+</p>
+
 # Token Economy Engine
 
 > Find the tokens you burn for nothing in **Claude Code** — then fix the root cause and re-measure, week after week.
 
+[![lint](https://github.com/peter-tnc-453/token-economy-engine/actions/workflows/lint.yml/badge.svg)](https://github.com/peter-tnc-453/token-economy-engine/actions/workflows/lint.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 ![Python](https://img.shields.io/badge/python-3.9%2B-blue.svg)
 ![Dependencies](https://img.shields.io/badge/runtime%20deps-stdlib%20only-brightgreen.svg)
@@ -11,21 +16,9 @@ A cost report tells you the temperature. This tells you **where the fever is** �
 
 Everything runs **100% locally** by reading the transcript JSONL that Claude Code already writes to `~/.claude/projects/**/*.jsonl`. No account, no cloud, no paid service.
 
-```
-============================================================
-TOKEN WASTE SCAN — 62 sessions
-============================================================
-  Failed tool calls:    162  (~18,883 tokens burned)
-  Redundant reads:      94 files re-read
-  Big results (>5k tok):108 (context bloat)
-  Agent spawns: 326  |  Workflow: 16  (check over-tooling)
-
-  Worst offenders (most waste):
-   - 51163cc6: 9 fail (Bash, Edit, SendUserFile, TaskStop) / 3 workflow
-   - e5fd48b2: 2 fail (Edit) / 4 re-read / 5 big dump / 2 workflow
-   ...
-  next: review flags -> 1-2 concrete fixes -> feedback-loop.md -> re-measure
-```
+<p align="center">
+  <img src="assets/scan-output.png" alt="token_waste_scan.py output" width="80%">
+</p>
 
 ## Why
 
